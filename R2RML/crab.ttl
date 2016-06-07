@@ -15,7 +15,8 @@
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix locn:  <http://www.w3.org/ns/locn#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-
+@prefix geo:  <http://www.opengis.net/ont/geosparql#> .
+@prefix db: <http://dbpedia.org/ontology/> .
 
 
 <AdresMapping>
@@ -25,17 +26,55 @@
   a rr:BaseTableOrView
   ];
   rr:subjectMap [
-    rr:template "http://id.vlaanderen.be/id/adres/{AdresID}#id";
+    rr:template "http://id.vlaanderen.be/id/adres/{AdresID}";
     rr:class locn:Address
   ]
 ;
   rr:predicateObjectMap [
-    rr:predicate dcterms:identifier;
+    rr:predicate geo:sfTouches;
     rr:objectMap [
-    rr:column "AdresID"
+    rr:parentTriplesMap <StraatMapping> ;
+    rr:joinCondition [
+       rr:child "StraatID";
+       rr:parent "StraatID"
     ]
    ]
-  .
+  ]
+  ; 
+ rr:predicateObjectMap [
+    rr:predicate locn:locatorDesignator;
+    rr:objectMap [
+    rr:column "Huisnummer"
+    ]
+   ]
+ ;  
+ rr:predicateObjectMap [
+    rr:predicate locn:postCode;
+    rr:objectMap [
+    rr:column "Postcode"
+    ]
+   ]
+ ;  
+ .
+
+  <StraatMapping>
+  a rr:TriplesMap;
+  rr:logicalTable [ 
+  rr:tableName "Straat" ;
+  a rr:BaseTableOrView
+  ];
+  rr:subjectMap [
+    rr:template "http://id.vlaanderen.be/id/straat/{StraatID}";
+    rr:class db:Street
+  ]
+;
+ rr:predicateObjectMap [
+    rr:predicate dcterms:identifier;
+    rr:objectMap [
+    rr:column "GemeenteID"
+    ]
+   ]
+ ;  .
 
 
    
