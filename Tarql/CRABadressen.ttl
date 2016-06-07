@@ -1,0 +1,1715 @@
+@prefix schema:  <http://schema.org/> .
+@prefix org:  <http://www.w3.org/ns/org#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix fn:  <http://www.w3.org/2005/xpath-functions#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos:  <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix geo:  <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rov:  <http://www.w3.org/ns/regorg#> .
+@prefix kbo:  <http://data.kbodata.be/def#> .
+@prefix locn:  <http://www.w3.org/ns/locn#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://id.vlaanderen.be/id/adres/2000000001>
+        rdf:type                locn:Address ;
+        rdfs:label              "Steenweg op Oosthoven 51, 2300 Turnhout" ;
+        locn:fullAddress        "Steenweg op Oosthoven 51, 2300 Turnhout" ;
+        locn:thoroughfare       "Steenweg op Oosthoven" ;
+        locn:locatorDesignator  "51" ;
+        locn:postName           "Turnhout" ;
+        locn:postCode           "2300" ;
+        locn:addrssID           "2000000001" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13040#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/17718> ;
+        geo:hasGeometry         _:b0 .
+
+_:b0    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.951547789191432 51.33002461413248)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000003>
+        rdf:type                locn:Address ;
+        rdfs:label              "Meersstraat 7, 9185 Wachtebeke" ;
+        locn:fullAddress        "Meersstraat 7, 9185 Wachtebeke" ;
+        locn:thoroughfare       "Meersstraat" ;
+        locn:locatorDesignator  "7" ;
+        locn:postName           "Wachtebeke" ;
+        locn:postCode           "9185" ;
+        locn:addrssID           "2000000003" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44073#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/73796> ;
+        geo:hasGeometry         _:b1 .
+
+_:b1    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.857570753502765 51.168179330473095)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000005>
+        rdf:type                locn:Address ;
+        rdfs:label              "Klaverstraat 1A, 9000 Gent" ;
+        locn:fullAddress        "Klaverstraat 1A, 9000 Gent" ;
+        locn:thoroughfare       "Klaverstraat" ;
+        locn:locatorDesignator  "1A" ;
+        locn:postName           "Gent" ;
+        locn:postCode           "9000" ;
+        locn:addrssID           "2000000005" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44021#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanPerceel> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/70689> ;
+        geo:hasGeometry         _:b2 .
+
+_:b2    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.7095646532397213 51.07199962683369)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000007>
+        rdf:type                locn:Address ;
+        rdfs:label              "Gaston Devoswijk 20, 1850 Grimbergen" ;
+        locn:fullAddress        "Gaston Devoswijk 20, 1850 Grimbergen" ;
+        locn:thoroughfare       "Gaston Devoswijk" ;
+        locn:locatorDesignator  "20" ;
+        locn:postName           "Grimbergen" ;
+        locn:postCode           "1850" ;
+        locn:addrssID           "2000000007" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23025#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/25717> ;
+        geo:hasGeometry         _:b3 .
+
+_:b3    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.418638754085213 50.952166052038)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000009>
+        rdf:type                locn:Address ;
+        rdfs:label              "Violetlaan 7, 2910 Essen" ;
+        locn:fullAddress        "Violetlaan 7, 2910 Essen" ;
+        locn:thoroughfare       "Violetlaan" ;
+        locn:locatorDesignator  "7" ;
+        locn:postName           "Essen" ;
+        locn:postCode           "2910" ;
+        locn:addrssID           "2000000009" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11016#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/4838> ;
+        geo:hasGeometry         _:b4 .
+
+_:b4    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.445737423509149 51.437095218164664)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000011>
+        rdf:type                locn:Address ;
+        rdfs:label              "Rechtstraat 38, 3700 Tongeren" ;
+        locn:fullAddress        "Rechtstraat 38, 3700 Tongeren" ;
+        locn:thoroughfare       "Rechtstraat" ;
+        locn:locatorDesignator  "38" ;
+        locn:postName           "Tongeren" ;
+        locn:postCode           "3700" ;
+        locn:addrssID           "2000000011" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/73083#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/123206> ;
+        geo:hasGeometry         _:b5 .
+
+_:b5    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.441934053175787 50.7484208768885)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000013>
+        rdf:type                locn:Address ;
+        rdfs:label              "Mevrouwhofstraat 42, 3511 Hasselt" ;
+        locn:fullAddress        "Mevrouwhofstraat 42, 3511 Hasselt" ;
+        locn:thoroughfare       "Mevrouwhofstraat" ;
+        locn:locatorDesignator  "42" ;
+        locn:postName           "Hasselt" ;
+        locn:postCode           "3511" ;
+        locn:addrssID           "2000000013" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71022#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/114916> ;
+        geo:hasGeometry         _:b6 .
+
+_:b6    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.269547445571958 50.95330169123967)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000015>
+        rdf:type                locn:Address ;
+        rdfs:label              "Watermolenstraat 21, 1742 Ternat" ;
+        locn:fullAddress        "Watermolenstraat 21, 1742 Ternat" ;
+        locn:thoroughfare       "Watermolenstraat" ;
+        locn:locatorDesignator  "21" ;
+        locn:postName           "Ternat" ;
+        locn:postCode           "1742" ;
+        locn:addrssID           "2000000015" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23086#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/29175> ;
+        geo:hasGeometry         _:b7 .
+
+_:b7    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.148700546081324 50.86958208238639)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000017>
+        rdf:type                locn:Address ;
+        rdfs:label              "Belgicastraat 9, 1930 Zaventem" ;
+        locn:fullAddress        "Belgicastraat 9, 1930 Zaventem" ;
+        locn:thoroughfare       "Belgicastraat" ;
+        locn:locatorDesignator  "9" ;
+        locn:postName           "Zaventem" ;
+        locn:postCode           "1930" ;
+        locn:addrssID           "2000000017" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23094#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/29579> ;
+        geo:hasGeometry         _:b8 .
+
+_:b8    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.456311237097036 50.878619239355004)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000020>
+        rdf:type                locn:Address ;
+        rdfs:label              "Holle Eikstraat 26, 1840 Londerzeel" ;
+        locn:fullAddress        "Holle Eikstraat 26, 1840 Londerzeel" ;
+        locn:thoroughfare       "Holle Eikstraat" ;
+        locn:locatorDesignator  "26" ;
+        locn:postName           "Londerzeel" ;
+        locn:postCode           "1840" ;
+        locn:addrssID           "2000000020" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23045#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/27227> ;
+        geo:hasGeometry         _:b9 .
+
+_:b9    rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.30522327456154 51.01465793666586)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000022>
+        rdf:type                locn:Address ;
+        rdfs:label              "Vuggelberg 6, 3270 Scherpenheuvel-Zichem" ;
+        locn:fullAddress        "Vuggelberg 6, 3270 Scherpenheuvel-Zichem" ;
+        locn:thoroughfare       "Vuggelberg" ;
+        locn:locatorDesignator  "6" ;
+        locn:postName           "Scherpenheuvel-Zichem" ;
+        locn:postCode           "3270" ;
+        locn:addrssID           "2000000022" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/24134#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/37468> ;
+        geo:hasGeometry         _:b10 .
+
+_:b10   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.942744085334436 50.96275437136149)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000024>
+        rdf:type                locn:Address ;
+        rdfs:label              "Hertjen 31, 9100 Sint-Niklaas" ;
+        locn:fullAddress        "Hertjen 31, 9100 Sint-Niklaas" ;
+        locn:thoroughfare       "Hertjen" ;
+        locn:locatorDesignator  "31" ;
+        locn:postName           "Sint-Niklaas" ;
+        locn:postCode           "9100" ;
+        locn:addrssID           "2000000024" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/46021#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/77683> ;
+        geo:hasGeometry         _:b11 .
+
+_:b11   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.15963642825731 51.157371560854045)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000026>
+        rdf:type                locn:Address ;
+        rdfs:label              "Dendermondsesteenweg 2, 1730 Asse" ;
+        locn:fullAddress        "Dendermondsesteenweg 2, 1730 Asse" ;
+        locn:thoroughfare       "Dendermondsesteenweg" ;
+        locn:locatorDesignator  "2" ;
+        locn:postName           "Asse" ;
+        locn:postCode           "1730" ;
+        locn:addrssID           "2000000026" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23002#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/24217> ;
+        geo:hasGeometry         _:b12 .
+
+_:b12   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.184509076299168 50.919607488760796)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000028>
+        rdf:type                locn:Address ;
+        rdfs:label              "Oude Desselgemstraat 59, 8790 Waregem" ;
+        locn:fullAddress        "Oude Desselgemstraat 59, 8790 Waregem" ;
+        locn:thoroughfare       "Oude Desselgemstraat" ;
+        locn:locatorDesignator  "59" ;
+        locn:postName           "Waregem" ;
+        locn:postCode           "8790" ;
+        locn:addrssID           "2000000028" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/34040#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/53827> ;
+        geo:hasGeometry         _:b13 .
+
+_:b13   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.4058561629734307 50.88008982454753)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000030>
+        rdf:type                locn:Address ;
+        rdfs:label              "Makelhoeve 2, 2431 Laakdal" ;
+        locn:fullAddress        "Makelhoeve 2, 2431 Laakdal" ;
+        locn:thoroughfare       "Makelhoeve" ;
+        locn:locatorDesignator  "2" ;
+        locn:postName           "Laakdal" ;
+        locn:postCode           "2431" ;
+        locn:addrssID           "2000000030" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13053#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/18510> ;
+        geo:hasGeometry         _:b14 .
+
+_:b14   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.00534021891944 51.067053000608496)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000032>
+        rdf:type                locn:Address ;
+        rdfs:label              "Baron Frans du Fourstraat 46, 2300 Turnhout" ;
+        locn:fullAddress        "Baron Frans du Fourstraat 46, 2300 Turnhout" ;
+        locn:thoroughfare       "Baron Frans du Fourstraat" ;
+        locn:locatorDesignator  "46" ;
+        locn:postName           "Turnhout" ;
+        locn:postCode           "2300" ;
+        locn:addrssID           "2000000032" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13040#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/17418> ;
+        geo:hasGeometry         _:b15 .
+
+_:b15   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.953167341053017 51.32492497049091)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000034>
+        rdf:type                locn:Address ;
+        rdfs:label              "Beukenlaan 25, 9051 Gent" ;
+        locn:fullAddress        "Beukenlaan 25, 9051 Gent" ;
+        locn:thoroughfare       "Beukenlaan" ;
+        locn:locatorDesignator  "25" ;
+        locn:postName           "Gent" ;
+        locn:postCode           "9051" ;
+        locn:addrssID           "2000000034" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44021#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanPerceel> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/69702> ;
+        geo:hasGeometry         _:b16 .
+
+_:b16   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.6733548022327747 51.0265078785742)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000036>
+        rdf:type                locn:Address ;
+        rdfs:label              "Braambessenlaan 10, 3590 Diepenbeek" ;
+        locn:fullAddress        "Braambessenlaan 10, 3590 Diepenbeek" ;
+        locn:thoroughfare       "Braambessenlaan" ;
+        locn:locatorDesignator  "10" ;
+        locn:postName           "Diepenbeek" ;
+        locn:postCode           "3590" ;
+        locn:addrssID           "2000000036" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71011#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/113271> ;
+        geo:hasGeometry         _:b17 .
+
+_:b17   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.4331510484574475 50.93278950261912)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000038>
+        rdf:type                locn:Address ;
+        rdfs:label              "Polenlaan 50, 9170 Sint-Gillis-Waas" ;
+        locn:fullAddress        "Polenlaan 50, 9170 Sint-Gillis-Waas" ;
+        locn:thoroughfare       "Polenlaan" ;
+        locn:locatorDesignator  "50" ;
+        locn:postName           "Sint-Gillis-Waas" ;
+        locn:postCode           "9170" ;
+        locn:addrssID           "2000000038" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/46020#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/77461> ;
+        geo:hasGeometry         _:b18 .
+
+_:b18   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.080576040235824 51.2522066312183)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000040>
+        rdf:type                locn:Address ;
+        rdfs:label              "Godevaert Braemstraat 15, 9140 Temse" ;
+        locn:fullAddress        "Godevaert Braemstraat 15, 9140 Temse" ;
+        locn:thoroughfare       "Godevaert Braemstraat" ;
+        locn:locatorDesignator  "15" ;
+        locn:postName           "Temse" ;
+        locn:postCode           "9140" ;
+        locn:addrssID           "2000000040" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/46025#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/78271> ;
+        geo:hasGeometry         _:b19 .
+
+_:b19   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.139478310565585 51.113041559088856)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000042>
+        rdf:type                locn:Address ;
+        rdfs:label              "Pelikaanlaan 6, 9800 Deinze" ;
+        locn:fullAddress        "Pelikaanlaan 6, 9800 Deinze" ;
+        locn:thoroughfare       "Pelikaanlaan" ;
+        locn:locatorDesignator  "6" ;
+        locn:postName           "Deinze" ;
+        locn:postCode           "9800" ;
+        locn:addrssID           "2000000042" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44011#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/68390> ;
+        geo:hasGeometry         _:b20 .
+
+_:b20   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.515344746919249 50.96061369114219)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000044>
+        rdf:type                locn:Address ;
+        rdfs:label              "Maalse Steenweg 104, 8310 Brugge" ;
+        locn:fullAddress        "Maalse Steenweg 104, 8310 Brugge" ;
+        locn:thoroughfare       "Maalse Steenweg" ;
+        locn:locatorDesignator  "104" ;
+        locn:postName           "Brugge" ;
+        locn:postCode           "8310" ;
+        locn:addrssID           "2000000044" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/31005#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/45639> ;
+        geo:hasGeometry         _:b21 .
+
+_:b21   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.2454320296221346 51.210798140723256)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000046>
+        rdf:type                locn:Address ;
+        rdfs:label              "Hoge Weg 4, 2200 Herentals" ;
+        locn:fullAddress        "Hoge Weg 4, 2200 Herentals" ;
+        locn:thoroughfare       "Hoge Weg" ;
+        locn:locatorDesignator  "4" ;
+        locn:postName           "Herentals" ;
+        locn:postCode           "2200" ;
+        locn:addrssID           "2000000046" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13011#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/14249> ;
+        geo:hasGeometry         _:b22 .
+
+_:b22   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.819899845451833 51.146812912294976)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000048>
+        rdf:type                locn:Address ;
+        rdfs:label              "Duinviooltjesstraat 35, 8300 Knokke-Heist" ;
+        locn:fullAddress        "Duinviooltjesstraat 35, 8300 Knokke-Heist" ;
+        locn:thoroughfare       "Duinviooltjesstraat" ;
+        locn:locatorDesignator  "35" ;
+        locn:postName           "Knokke-Heist" ;
+        locn:postCode           "8300" ;
+        locn:addrssID           "2000000048" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/31043#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/47867> ;
+        geo:hasGeometry         _:b23 .
+
+_:b23   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.2888108586429023 51.35013160592572)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000051>
+        rdf:type                locn:Address ;
+        rdfs:label              "Minderbroedersrui 34, 2000 Antwerpen" ;
+        locn:fullAddress        "Minderbroedersrui 34, 2000 Antwerpen" ;
+        locn:thoroughfare       "Minderbroedersrui" ;
+        locn:locatorDesignator  "34" ;
+        locn:postName           "Antwerpen" ;
+        locn:postCode           "2000" ;
+        locn:addrssID           "2000000051" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11002#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/2032> ;
+        geo:hasGeometry         _:b24 .
+
+_:b24   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.403069780409142 51.22202528951763)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000054>
+        rdf:type                locn:Address ;
+        rdfs:label              "Lange Van Bloerstraat 19, 2060 Antwerpen" ;
+        locn:fullAddress        "Lange Van Bloerstraat 19, 2060 Antwerpen" ;
+        locn:thoroughfare       "Lange Van Bloerstraat" ;
+        locn:locatorDesignator  "19" ;
+        locn:postName           "Antwerpen" ;
+        locn:postCode           "2060" ;
+        locn:addrssID           "2000000054" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11002#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/1755> ;
+        geo:hasGeometry         _:b25 .
+
+_:b25   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.429703008862762 51.22065822811299)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000056>
+        rdf:type                locn:Address ;
+        rdfs:label              "Kerkelei 24, 2610 Antwerpen" ;
+        locn:fullAddress        "Kerkelei 24, 2610 Antwerpen" ;
+        locn:thoroughfare       "Kerkelei" ;
+        locn:locatorDesignator  "24" ;
+        locn:postName           "Antwerpen" ;
+        locn:postCode           "2610" ;
+        locn:addrssID           "2000000056" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11002#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/1506> ;
+        geo:hasGeometry         _:b26 .
+
+_:b26   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.395811233705074 51.16738430462658)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000058>
+        rdf:type                locn:Address ;
+        rdfs:label              "Julius Dooghelaan 1, 8310 Brugge" ;
+        locn:fullAddress        "Julius Dooghelaan 1, 8310 Brugge" ;
+        locn:thoroughfare       "Julius Dooghelaan" ;
+        locn:locatorDesignator  "1" ;
+        locn:postName           "Brugge" ;
+        locn:postCode           "8310" ;
+        locn:addrssID           "2000000058" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/31005#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/45388> ;
+        geo:hasGeometry         _:b27 .
+
+_:b27   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.2420559226152075 51.21635591362921)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000060>
+        rdf:type                locn:Address ;
+        rdfs:label              "Hondekensmolenstraat 65, 8870 Izegem" ;
+        locn:fullAddress        "Hondekensmolenstraat 65, 8870 Izegem" ;
+        locn:thoroughfare       "Hondekensmolenstraat" ;
+        locn:locatorDesignator  "65" ;
+        locn:postName           "Izegem" ;
+        locn:postCode           "8870" ;
+        locn:addrssID           "2000000060" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/36008#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanPerceel> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/57162> ;
+        geo:hasGeometry         _:b28 .
+
+_:b28   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.226857721842224 50.9076766922946)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000062>
+        rdf:type                locn:Address ;
+        rdfs:label              "Oude Liersebaan 9, 2220 Heist-op-den-Berg" ;
+        locn:fullAddress        "Oude Liersebaan 9, 2220 Heist-op-den-Berg" ;
+        locn:thoroughfare       "Oude Liersebaan" ;
+        locn:locatorDesignator  "9" ;
+        locn:postName           "Heist-op-den-Berg" ;
+        locn:postCode           "2220" ;
+        locn:addrssID           "2000000062" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/12014#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/9895> ;
+        geo:hasGeometry         _:b29 .
+
+_:b29   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.712260964989634 51.07715949256402)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000064>
+        rdf:type                locn:Address ;
+        rdfs:label              "Molenstraat 100, 2960 Brecht" ;
+        locn:fullAddress        "Molenstraat 100, 2960 Brecht" ;
+        locn:thoroughfare       "Molenstraat" ;
+        locn:locatorDesignator  "100" ;
+        locn:postName           "Brecht" ;
+        locn:postCode           "2960" ;
+        locn:addrssID           "2000000064" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11009#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/4289> ;
+        geo:hasGeometry         _:b30 .
+
+_:b30   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.618628954470087 51.34032599638881)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000066>
+        rdf:type                locn:Address ;
+        rdfs:label              "Gezellestraat (Guido) 34, 1800 Vilvoorde" ;
+        locn:fullAddress        "Gezellestraat (Guido) 34, 1800 Vilvoorde" ;
+        locn:thoroughfare       "Gezellestraat (Guido)" ;
+        locn:locatorDesignator  "34" ;
+        locn:postName           "Vilvoorde" ;
+        locn:postCode           "1800" ;
+        locn:addrssID           "2000000066" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23088#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanPerceel> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/29279> ;
+        geo:hasGeometry         _:b31 .
+
+_:b31   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.427727496099579 50.93388986945359)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000068>
+        rdf:type                locn:Address ;
+        rdfs:label              "Gentsesteenweg 223, 9240 Zele" ;
+        locn:fullAddress        "Gentsesteenweg 223, 9240 Zele" ;
+        locn:thoroughfare       "Gentsesteenweg" ;
+        locn:locatorDesignator  "223" ;
+        locn:postName           "Zele" ;
+        locn:postCode           "9240" ;
+        locn:addrssID           "2000000068" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/42028#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/66596> ;
+        geo:hasGeometry         _:b32 .
+
+_:b32   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.011523879027443 51.05619618462997)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000070>
+        rdf:type                locn:Address ;
+        rdfs:label              "Henri Regastraat 43, 3000 Leuven" ;
+        locn:fullAddress        "Henri Regastraat 43, 3000 Leuven" ;
+        locn:thoroughfare       "Henri Regastraat" ;
+        locn:locatorDesignator  "43" ;
+        locn:postName           "Leuven" ;
+        locn:postCode           "3000" ;
+        locn:addrssID           "2000000070" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/24062#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/34890> ;
+        geo:hasGeometry         _:b33 .
+
+_:b33   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.706707856113624 50.870641785706205)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000072>
+        rdf:type                locn:Address ;
+        rdfs:label              "Oude Aalbeeksestraat 64, 8510 Kortrijk" ;
+        locn:fullAddress        "Oude Aalbeeksestraat 64, 8510 Kortrijk" ;
+        locn:thoroughfare       "Oude Aalbeeksestraat" ;
+        locn:locatorDesignator  "64" ;
+        locn:postName           "Kortrijk" ;
+        locn:postCode           "8510" ;
+        locn:addrssID           "2000000072" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/34022#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/52497> ;
+        geo:hasGeometry         _:b34 .
+
+_:b34   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.255467735687123 50.76904433934834)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000074>
+        rdf:type                locn:Address ;
+        rdfs:label              "Brieversweg 45, 8340 Damme" ;
+        locn:fullAddress        "Brieversweg 45, 8340 Damme" ;
+        locn:thoroughfare       "Brieversweg" ;
+        locn:locatorDesignator  "45" ;
+        locn:postName           "Damme" ;
+        locn:postCode           "8340" ;
+        locn:addrssID           "2000000074" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/31006#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/46308> ;
+        geo:hasGeometry         _:b35 .
+
+_:b35   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.3312304408092914 51.224282351780545)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000076>
+        rdf:type                locn:Address ;
+        rdfs:label              "Gelmelstraat 71, 2320 Hoogstraten" ;
+        locn:fullAddress        "Gelmelstraat 71, 2320 Hoogstraten" ;
+        locn:thoroughfare       "Gelmelstraat" ;
+        locn:locatorDesignator  "71" ;
+        locn:postName           "Hoogstraten" ;
+        locn:postCode           "2320" ;
+        locn:addrssID           "2000000076" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13014#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanPerceelGrb> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/14760> ;
+        geo:hasGeometry         _:b36 .
+
+_:b36   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.76467163090975 51.40244030561075)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000078>
+        rdf:type                locn:Address ;
+        rdfs:label              "Vinkenlaan 54, 1742 Ternat" ;
+        locn:fullAddress        "Vinkenlaan 54, 1742 Ternat" ;
+        locn:thoroughfare       "Vinkenlaan" ;
+        locn:locatorDesignator  "54" ;
+        locn:postName           "Ternat" ;
+        locn:postCode           "1742" ;
+        locn:addrssID           "2000000078" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23086#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/29170> ;
+        geo:hasGeometry         _:b37 .
+
+_:b37   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.157390115486301 50.86798204827221)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000080>
+        rdf:type                locn:Address ;
+        rdfs:label              "Het Looike 7, 2990 Wuustwezel" ;
+        locn:fullAddress        "Het Looike 7, 2990 Wuustwezel" ;
+        locn:thoroughfare       "Het Looike" ;
+        locn:locatorDesignator  "7" ;
+        locn:postName           "Wuustwezel" ;
+        locn:postCode           "2990" ;
+        locn:addrssID           "2000000080" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11053#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/7747> ;
+        geo:hasGeometry         _:b38 .
+
+_:b38   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.586399697612517 51.39039501733604)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000082>
+        rdf:type                locn:Address ;
+        rdfs:label              "Gaston Fromontstraat 47, 2830 Willebroek" ;
+        locn:fullAddress        "Gaston Fromontstraat 47, 2830 Willebroek" ;
+        locn:thoroughfare       "Gaston Fromontstraat" ;
+        locn:locatorDesignator  "47" ;
+        locn:postName           "Willebroek" ;
+        locn:postCode           "2830" ;
+        locn:addrssID           "2000000082" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/12040#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/12203> ;
+        geo:hasGeometry         _:b39 .
+
+_:b39   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.354054189692031 51.06197043274277)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000084>
+        rdf:type                locn:Address ;
+        rdfs:label              "Spaanskwartier 20, 9170 Sint-Gillis-Waas" ;
+        locn:fullAddress        "Spaanskwartier 20, 9170 Sint-Gillis-Waas" ;
+        locn:thoroughfare       "Spaanskwartier" ;
+        locn:locatorDesignator  "20" ;
+        locn:postName           "Sint-Gillis-Waas" ;
+        locn:postCode           "9170" ;
+        locn:addrssID           "2000000084" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/46020#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/77493> ;
+        geo:hasGeometry         _:b40 .
+
+_:b40   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.112798498794979 51.26333574419357)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000086>
+        rdf:type                locn:Address ;
+        rdfs:label              "Lange Molenstraat 89, 9280 Lebbeke" ;
+        locn:fullAddress        "Lange Molenstraat 89, 9280 Lebbeke" ;
+        locn:thoroughfare       "Lange Molenstraat" ;
+        locn:locatorDesignator  "89" ;
+        locn:postName           "Lebbeke" ;
+        locn:postCode           "9280" ;
+        locn:addrssID           "2000000086" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/42011#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/65927> ;
+        geo:hasGeometry         _:b41 .
+
+_:b41   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.1209334647446 50.99368538116187)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000088>
+        rdf:type                locn:Address ;
+        rdfs:label              "Houwaartstraat 6, 3270 Scherpenheuvel-Zichem" ;
+        locn:fullAddress        "Houwaartstraat 6, 3270 Scherpenheuvel-Zichem" ;
+        locn:thoroughfare       "Houwaartstraat" ;
+        locn:locatorDesignator  "6" ;
+        locn:postName           "Scherpenheuvel-Zichem" ;
+        locn:postCode           "3270" ;
+        locn:addrssID           "2000000088" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/24134#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/37295> ;
+        geo:hasGeometry         _:b42 .
+
+_:b42   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.968442833061796 50.967187980903226)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000090>
+        rdf:type                locn:Address ;
+        rdfs:label              "Tongersesteenweg 56, 3723 Kortessem" ;
+        locn:fullAddress        "Tongersesteenweg 56, 3723 Kortessem" ;
+        locn:thoroughfare       "Tongersesteenweg" ;
+        locn:locatorDesignator  "56" ;
+        locn:postName           "Kortessem" ;
+        locn:postCode           "3723" ;
+        locn:addrssID           "2000000090" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/73040#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/122248> ;
+        geo:hasGeometry         _:b43 .
+
+_:b43   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.38954433817321 50.85214644771943)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000092>
+        rdf:type                locn:Address ;
+        rdfs:label              "Sint-Jansstraat 6, 8791 Waregem" ;
+        locn:fullAddress        "Sint-Jansstraat 6, 8791 Waregem" ;
+        locn:thoroughfare       "Sint-Jansstraat" ;
+        locn:locatorDesignator  "6" ;
+        locn:postName           "Waregem" ;
+        locn:postCode           "8791" ;
+        locn:addrssID           "2000000092" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/34040#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/53893> ;
+        geo:hasGeometry         _:b44 .
+
+_:b44   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.334947040411223 50.869798480624105)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000094>
+        rdf:type                locn:Address ;
+        rdfs:label              "Stationsstraat 28, 3840 Borgloon" ;
+        locn:fullAddress        "Stationsstraat 28, 3840 Borgloon" ;
+        locn:thoroughfare       "Stationsstraat" ;
+        locn:locatorDesignator  "28" ;
+        locn:postName           "Borgloon" ;
+        locn:postCode           "3840" ;
+        locn:addrssID           "2000000094" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/73009#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/121829> ;
+        geo:hasGeometry         _:b45 .
+
+_:b45   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.342089520660798 50.8059769331006)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000096>
+        rdf:type                locn:Address ;
+        rdfs:label              "Ieperstraat 1, 2200 Herentals" ;
+        locn:fullAddress        "Ieperstraat 1, 2200 Herentals" ;
+        locn:thoroughfare       "Ieperstraat" ;
+        locn:locatorDesignator  "1" ;
+        locn:postName           "Herentals" ;
+        locn:postCode           "2200" ;
+        locn:addrssID           "2000000096" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13011#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/14255> ;
+        geo:hasGeometry         _:b46 .
+
+_:b46   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.8266125400546445 51.17475301157993)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000098>
+        rdf:type                locn:Address ;
+        rdfs:label              "Preshoekstraat 145, 8510 Kortrijk" ;
+        locn:fullAddress        "Preshoekstraat 145, 8510 Kortrijk" ;
+        locn:thoroughfare       "Preshoekstraat" ;
+        locn:locatorDesignator  "145" ;
+        locn:postName           "Kortrijk" ;
+        locn:postCode           "8510" ;
+        locn:addrssID           "2000000098" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/34022#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/52570> ;
+        geo:hasGeometry         _:b47 .
+
+_:b47   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.225653124977483 50.80092400144023)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000101>
+        rdf:type                locn:Address ;
+        rdfs:label              "Leuvensesteenweg 174, 2800 Mechelen" ;
+        locn:fullAddress        "Leuvensesteenweg 174, 2800 Mechelen" ;
+        locn:thoroughfare       "Leuvensesteenweg" ;
+        locn:locatorDesignator  "174" ;
+        locn:postName           "Mechelen" ;
+        locn:postCode           "2800" ;
+        locn:addrssID           "2000000101" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/12025#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanPerceelGrb> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/10768> ;
+        geo:hasGeometry         _:b48 .
+
+_:b48   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.496859294792717 51.015715860124125)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000103>
+        rdf:type                locn:Address ;
+        rdfs:label              "Overijsesteenweg 29, 1560 Hoeilaart" ;
+        locn:fullAddress        "Overijsesteenweg 29, 1560 Hoeilaart" ;
+        locn:thoroughfare       "Overijsesteenweg" ;
+        locn:locatorDesignator  "29" ;
+        locn:postName           "Hoeilaart" ;
+        locn:postCode           "1560" ;
+        locn:addrssID           "2000000103" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23033#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/26636> ;
+        geo:hasGeometry         _:b49 .
+
+_:b49   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.475804005562394 50.76956197738929)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000105>
+        rdf:type                locn:Address ;
+        rdfs:label              "Nieuwe Kerkstraat 88, 9150 Kruibeke" ;
+        locn:fullAddress        "Nieuwe Kerkstraat 88, 9150 Kruibeke" ;
+        locn:thoroughfare       "Nieuwe Kerkstraat" ;
+        locn:locatorDesignator  "88" ;
+        locn:postName           "Kruibeke" ;
+        locn:postCode           "9150" ;
+        locn:addrssID           "2000000105" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/46013#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/76862> ;
+        geo:hasGeometry         _:b50 .
+
+_:b50   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.3091583966785425 51.17542192007642)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000107>
+        rdf:type                locn:Address ;
+        rdfs:label              "Weerterweg 61, 3950 Bocholt" ;
+        locn:fullAddress        "Weerterweg 61, 3950 Bocholt" ;
+        locn:thoroughfare       "Weerterweg" ;
+        locn:locatorDesignator  "61" ;
+        locn:postName           "Bocholt" ;
+        locn:postCode           "3950" ;
+        locn:addrssID           "2000000107" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/72003#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/117778> ;
+        geo:hasGeometry         _:b51 .
+
+_:b51   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.593567625765019 51.183827683699604)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000109>
+        rdf:type                locn:Address ;
+        rdfs:label              "Vredelaan 33, 9400 Ninove" ;
+        locn:fullAddress        "Vredelaan 33, 9400 Ninove" ;
+        locn:thoroughfare       "Vredelaan" ;
+        locn:locatorDesignator  "33" ;
+        locn:postName           "Ninove" ;
+        locn:postCode           "9400" ;
+        locn:addrssID           "2000000109" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/41048#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/63767> ;
+        geo:hasGeometry         _:b52 .
+
+_:b52   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.017629354891162 50.82868849279586)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000111>
+        rdf:type                locn:Address ;
+        rdfs:label              "Langestraat 12, 3111 Rotselaar" ;
+        locn:fullAddress        "Langestraat 12, 3111 Rotselaar" ;
+        locn:thoroughfare       "Langestraat" ;
+        locn:locatorDesignator  "12" ;
+        locn:postName           "Rotselaar" ;
+        locn:postCode           "3111" ;
+        locn:addrssID           "2000000111" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/24094#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/36074> ;
+        geo:hasGeometry         _:b53 .
+
+_:b53   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.752166485867284 50.949183425936134)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000113>
+        rdf:type                locn:Address ;
+        rdfs:label              "Kauwstraat 31, 9550 Herzele" ;
+        locn:fullAddress        "Kauwstraat 31, 9550 Herzele" ;
+        locn:thoroughfare       "Kauwstraat" ;
+        locn:locatorDesignator  "31" ;
+        locn:postName           "Herzele" ;
+        locn:postCode           "9550" ;
+        locn:addrssID           "2000000113" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/41027#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/63075> ;
+        geo:hasGeometry         _:b54 .
+
+_:b54   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.8874731974637085 50.856363186517335)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000115>
+        rdf:type                locn:Address ;
+        rdfs:label              "Heggemuslaan 15, 2950 Kapellen" ;
+        locn:fullAddress        "Heggemuslaan 15, 2950 Kapellen" ;
+        locn:thoroughfare       "Heggemuslaan" ;
+        locn:locatorDesignator  "15" ;
+        locn:postName           "Kapellen" ;
+        locn:postCode           "2950" ;
+        locn:addrssID           "2000000115" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11023#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/5408> ;
+        geo:hasGeometry         _:b55 .
+
+_:b55   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.443194146450154 51.30349301246196)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000118>
+        rdf:type                locn:Address ;
+        rdfs:label              "Hagewijkpark 69, 9200 Dendermonde" ;
+        locn:fullAddress        "Hagewijkpark 69, 9200 Dendermonde" ;
+        locn:thoroughfare       "Hagewijkpark" ;
+        locn:locatorDesignator  "69" ;
+        locn:postName           "Dendermonde" ;
+        locn:postCode           "9200" ;
+        locn:addrssID           "2000000118" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/42006#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/65136> ;
+        geo:hasGeometry         _:b56 .
+
+_:b56   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.10207589833497 51.05107010554145)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000120>
+        rdf:type                locn:Address ;
+        rdfs:label              "Pamelsestraat 98, 1770 Liedekerke" ;
+        locn:fullAddress        "Pamelsestraat 98, 1770 Liedekerke" ;
+        locn:thoroughfare       "Pamelsestraat" ;
+        locn:locatorDesignator  "98" ;
+        locn:postName           "Liedekerke" ;
+        locn:postCode           "1770" ;
+        locn:addrssID           "2000000120" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/23044#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/27123> ;
+        geo:hasGeometry         _:b57 .
+
+_:b57   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.083509241081707 50.865245667809354)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000122>
+        rdf:type                locn:Address ;
+        rdfs:label              "Markt 27, 9700 Oudenaarde" ;
+        locn:fullAddress        "Markt 27, 9700 Oudenaarde" ;
+        locn:thoroughfare       "Markt" ;
+        locn:locatorDesignator  "27" ;
+        locn:postName           "Oudenaarde" ;
+        locn:postCode           "9700" ;
+        locn:addrssID           "2000000122" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/45035#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/74569> ;
+        geo:hasGeometry         _:b58 .
+
+_:b58   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.6036526220598293 50.842436432781994)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000124>
+        rdf:type                locn:Address ;
+        rdfs:label              "Dendermondse Steenweg 215, 9100 Sint-Niklaas" ;
+        locn:fullAddress        "Dendermondse Steenweg 215, 9100 Sint-Niklaas" ;
+        locn:thoroughfare       "Dendermondse Steenweg" ;
+        locn:locatorDesignator  "215" ;
+        locn:postName           "Sint-Niklaas" ;
+        locn:postCode           "9100" ;
+        locn:addrssID           "2000000124" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/46021#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/77601> ;
+        geo:hasGeometry         _:b59 .
+
+_:b59   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.147759449674086 51.14061505918077)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000126>
+        rdf:type                locn:Address ;
+        rdfs:label              "Kluizeveldenstraat 107, 2170 Antwerpen" ;
+        locn:fullAddress        "Kluizeveldenstraat 107, 2170 Antwerpen" ;
+        locn:thoroughfare       "Kluizeveldenstraat" ;
+        locn:locatorDesignator  "107" ;
+        locn:postName           "Antwerpen" ;
+        locn:postCode           "2170" ;
+        locn:addrssID           "2000000126" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11002#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/1573> ;
+        geo:hasGeometry         _:b60 .
+
+_:b60   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.434513610301152 51.244782381143594)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000128>
+        rdf:type                locn:Address ;
+        rdfs:label              "Hoegaardsestraat 194, 3000 Leuven" ;
+        locn:fullAddress        "Hoegaardsestraat 194, 3000 Leuven" ;
+        locn:thoroughfare       "Hoegaardsestraat" ;
+        locn:locatorDesignator  "194" ;
+        locn:postName           "Leuven" ;
+        locn:postCode           "3000" ;
+        locn:addrssID           "2000000128" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/24062#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/34907> ;
+        geo:hasGeometry         _:b61 .
+
+_:b61   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.725472914837013 50.863104103730336)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000130>
+        rdf:type                locn:Address ;
+        rdfs:label              "Molderbeemdendijk 3, 2440 Geel" ;
+        locn:fullAddress        "Molderbeemdendijk 3, 2440 Geel" ;
+        locn:thoroughfare       "Molderbeemdendijk" ;
+        locn:locatorDesignator  "3" ;
+        locn:postName           "Geel" ;
+        locn:postCode           "2440" ;
+        locn:addrssID           "2000000130" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13008#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/13656> ;
+        geo:hasGeometry         _:b62 .
+
+_:b62   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.982292959924332 51.18411839860758)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000132>
+        rdf:type                locn:Address ;
+        rdfs:label              "Pampertstraat 72, 3590 Diepenbeek" ;
+        locn:fullAddress        "Pampertstraat 72, 3590 Diepenbeek" ;
+        locn:thoroughfare       "Pampertstraat" ;
+        locn:locatorDesignator  "72" ;
+        locn:postName           "Diepenbeek" ;
+        locn:postCode           "3590" ;
+        locn:addrssID           "2000000132" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71011#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/113379> ;
+        geo:hasGeometry         _:b63 .
+
+_:b63   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.384039703416049 50.913135728647894)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000134>
+        rdf:type                locn:Address ;
+        rdfs:label              "Vrijheidsstraat 1, 8370 Blankenberge" ;
+        locn:fullAddress        "Vrijheidsstraat 1, 8370 Blankenberge" ;
+        locn:thoroughfare       "Vrijheidsstraat" ;
+        locn:locatorDesignator  "1" ;
+        locn:postName           "Blankenberge" ;
+        locn:postCode           "8370" ;
+        locn:addrssID           "2000000134" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/31004#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/44823> ;
+        geo:hasGeometry         _:b64 .
+
+_:b64   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.121193313298468 51.311712886354904)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000136>
+        rdf:type                locn:Address ;
+        rdfs:label              "Kortrijksesteenweg 706, 9000 Gent" ;
+        locn:fullAddress        "Kortrijksesteenweg 706, 9000 Gent" ;
+        locn:thoroughfare       "Kortrijksesteenweg" ;
+        locn:locatorDesignator  "706" ;
+        locn:postName           "Gent" ;
+        locn:postCode           "9000" ;
+        locn:addrssID           "2000000136" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44021#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanPerceel> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/70779> ;
+        geo:hasGeometry         _:b65 .
+
+_:b65   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.7109512634207165 51.029105386668654)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000138>
+        rdf:type                locn:Address ;
+        rdfs:label              "Boerenkrijgsingel 28, 3500 Hasselt" ;
+        locn:fullAddress        "Boerenkrijgsingel 28, 3500 Hasselt" ;
+        locn:thoroughfare       "Boerenkrijgsingel" ;
+        locn:locatorDesignator  "28" ;
+        locn:postName           "Hasselt" ;
+        locn:postCode           "3500" ;
+        locn:addrssID           "2000000138" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71022#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/114570> ;
+        geo:hasGeometry         _:b66 .
+
+_:b66   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.323554867944499 50.91736225175194)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000140>
+        rdf:type                locn:Address ;
+        rdfs:label              "Nijverheidslaan 6, 8970 Poperinge" ;
+        locn:fullAddress        "Nijverheidslaan 6, 8970 Poperinge" ;
+        locn:thoroughfare       "Nijverheidslaan" ;
+        locn:locatorDesignator  "6" ;
+        locn:postName           "Poperinge" ;
+        locn:postCode           "8970" ;
+        locn:addrssID           "2000000140" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/33021#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/50077> ;
+        geo:hasGeometry         _:b67 .
+
+_:b67   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (2.734765892637782 50.85100798038798)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000142>
+        rdf:type                locn:Address ;
+        rdfs:label              "Lindebaan 41, 3300 Tienen" ;
+        locn:fullAddress        "Lindebaan 41, 3300 Tienen" ;
+        locn:thoroughfare       "Lindebaan" ;
+        locn:locatorDesignator  "41" ;
+        locn:postName           "Tienen" ;
+        locn:postCode           "3300" ;
+        locn:addrssID           "2000000142" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/24107#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanPerceelGrb> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/36658> ;
+        geo:hasGeometry         _:b68 .
+
+_:b68   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.989074040710019 50.82779568840141)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000144>
+        rdf:type                locn:Address ;
+        rdfs:label              "Boonakker 12, 9140 Temse" ;
+        locn:fullAddress        "Boonakker 12, 9140 Temse" ;
+        locn:thoroughfare       "Boonakker" ;
+        locn:locatorDesignator  "12" ;
+        locn:postName           "Temse" ;
+        locn:postCode           "9140" ;
+        locn:addrssID           "2000000144" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/46025#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/78211> ;
+        geo:hasGeometry         _:b69 .
+
+_:b69   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.196476255251949 51.1321663349174)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000146>
+        rdf:type                locn:Address ;
+        rdfs:label              "Eugeen Dierckxlaan 3, 2970 Schilde" ;
+        locn:fullAddress        "Eugeen Dierckxlaan 3, 2970 Schilde" ;
+        locn:thoroughfare       "Eugeen Dierckxlaan" ;
+        locn:locatorDesignator  "3" ;
+        locn:postName           "Schilde" ;
+        locn:postCode           "2970" ;
+        locn:addrssID           "2000000146" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11039#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/6728> ;
+        geo:hasGeometry         _:b70 .
+
+_:b70   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.581592878304324 51.237710835604545)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000148>
+        rdf:type                locn:Address ;
+        rdfs:label              "Camille Lenaertsstraat 21, 3401 Landen" ;
+        locn:fullAddress        "Camille Lenaertsstraat 21, 3401 Landen" ;
+        locn:thoroughfare       "Camille Lenaertsstraat" ;
+        locn:locatorDesignator  "21" ;
+        locn:postName           "Landen" ;
+        locn:postCode           "3401" ;
+        locn:addrssID           "2000000148" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/24059#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/34412> ;
+        geo:hasGeometry         _:b71 .
+
+_:b71   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.094938640171273 50.720624297967454)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000150>
+        rdf:type                locn:Address ;
+        rdfs:label              "Mezenstraat 7, 2440 Geel" ;
+        locn:fullAddress        "Mezenstraat 7, 2440 Geel" ;
+        locn:thoroughfare       "Mezenstraat" ;
+        locn:locatorDesignator  "7" ;
+        locn:postName           "Geel" ;
+        locn:postCode           "2440" ;
+        locn:addrssID           "2000000150" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13008#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/13652> ;
+        geo:hasGeometry         _:b72 .
+
+_:b72   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.97305259011997 51.175398081715834)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000152>
+        rdf:type                locn:Address ;
+        rdfs:label              "Schutpenning 1, 3980 Tessenderlo" ;
+        locn:fullAddress        "Schutpenning 1, 3980 Tessenderlo" ;
+        locn:thoroughfare       "Schutpenning" ;
+        locn:locatorDesignator  "1" ;
+        locn:postName           "Tessenderlo" ;
+        locn:postCode           "3980" ;
+        locn:addrssID           "2000000152" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71057#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/116552> ;
+        geo:hasGeometry         _:b73 .
+
+_:b73   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.124312314540875 51.070195330780265)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000154>
+        rdf:type                locn:Address ;
+        rdfs:label              "Meyersstraat 46, 2100 Antwerpen" ;
+        locn:fullAddress        "Meyersstraat 46, 2100 Antwerpen" ;
+        locn:thoroughfare       "Meyersstraat" ;
+        locn:locatorDesignator  "46" ;
+        locn:postName           "Antwerpen" ;
+        locn:postCode           "2100" ;
+        locn:addrssID           "2000000154" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11002#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/2017> ;
+        geo:hasGeometry         _:b74 .
+
+_:b74   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.45210484834356 51.23313319500738)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000156>
+        rdf:type                locn:Address ;
+        rdfs:label              "Schapenstraat 3, 8400 Oostende" ;
+        locn:fullAddress        "Schapenstraat 3, 8400 Oostende" ;
+        locn:thoroughfare       "Schapenstraat" ;
+        locn:locatorDesignator  "3" ;
+        locn:postName           "Oostende" ;
+        locn:postCode           "8400" ;
+        locn:addrssID           "2000000156" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/35013#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/56131> ;
+        geo:hasGeometry         _:b75 .
+
+_:b75   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (2.9079174103765535 51.212729567064564)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000158>
+        rdf:type                locn:Address ;
+        rdfs:label              "Ertveldesteenweg 135A, 9968 Assenede" ;
+        locn:fullAddress        "Ertveldesteenweg 135A, 9968 Assenede" ;
+        locn:thoroughfare       "Ertveldesteenweg" ;
+        locn:locatorDesignator  "135A" ;
+        locn:postName           "Assenede" ;
+        locn:postCode           "9968" ;
+        locn:addrssID           "2000000158" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/43002#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/66760> ;
+        geo:hasGeometry         _:b76 .
+
+_:b76   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.7080573024785113 51.18653677964871)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000160>
+        rdf:type                locn:Address ;
+        rdfs:label              "Katangabinnenhof 8, 3080 Tervuren" ;
+        locn:fullAddress        "Katangabinnenhof 8, 3080 Tervuren" ;
+        locn:thoroughfare       "Katangabinnenhof" ;
+        locn:locatorDesignator  "8" ;
+        locn:postName           "Tervuren" ;
+        locn:postCode           "3080" ;
+        locn:addrssID           "2000000160" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/24104#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/36282> ;
+        geo:hasGeometry         _:b77 .
+
+_:b77   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.5340597683719395 50.836437741532)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000162>
+        rdf:type                locn:Address ;
+        rdfs:label              "Industrielaan 1, 9620 Zottegem" ;
+        locn:fullAddress        "Industrielaan 1, 9620 Zottegem" ;
+        locn:thoroughfare       "Industrielaan" ;
+        locn:locatorDesignator  "1" ;
+        locn:postName           "Zottegem" ;
+        locn:postCode           "9620" ;
+        locn:addrssID           "2000000162" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/41081#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/64058> ;
+        geo:hasGeometry         _:b78 .
+
+_:b78   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.836186154048872 50.874602926975996)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000164>
+        rdf:type                locn:Address ;
+        rdfs:label              "Engeldonk 27, 3583 Beringen" ;
+        locn:fullAddress        "Engeldonk 27, 3583 Beringen" ;
+        locn:thoroughfare       "Engeldonk" ;
+        locn:locatorDesignator  "27" ;
+        locn:postName           "Beringen" ;
+        locn:postCode           "3583" ;
+        locn:addrssID           "2000000164" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71004#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanPerceel> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/112802> ;
+        geo:hasGeometry         _:b79 .
+
+_:b79   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.144497593876534 51.04606898167559)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000166>
+        rdf:type                locn:Address ;
+        rdfs:label              "Appelaarstraat 2, 8800 Roeselare" ;
+        locn:fullAddress        "Appelaarstraat 2, 8800 Roeselare" ;
+        locn:thoroughfare       "Appelaarstraat" ;
+        locn:locatorDesignator  "2" ;
+        locn:postName           "Roeselare" ;
+        locn:postCode           "8800" ;
+        locn:addrssID           "2000000166" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/36015#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/57790> ;
+        geo:hasGeometry         _:b80 .
+
+_:b80   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.1424802804873804 50.94771754260843)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000168>
+        rdf:type                locn:Address ;
+        rdfs:label              "Stationsstraat 71, 2860 Sint-Katelijne-Waver" ;
+        locn:fullAddress        "Stationsstraat 71, 2860 Sint-Katelijne-Waver" ;
+        locn:thoroughfare       "Stationsstraat" ;
+        locn:locatorDesignator  "71" ;
+        locn:postName           "Sint-Katelijne-Waver" ;
+        locn:postCode           "2860" ;
+        locn:addrssID           "2000000168" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/12035#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/12090> ;
+        geo:hasGeometry         _:b81 .
+
+_:b81   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.525352724834172 51.0700867046046)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000170>
+        rdf:type                locn:Address ;
+        rdfs:label              "Izegemsestraat 274, 8500 Kortrijk" ;
+        locn:fullAddress        "Izegemsestraat 274, 8500 Kortrijk" ;
+        locn:thoroughfare       "Izegemsestraat" ;
+        locn:locatorDesignator  "274" ;
+        locn:postName           "Kortrijk" ;
+        locn:postCode           "8500" ;
+        locn:addrssID           "2000000170" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/34022#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/52208> ;
+        geo:hasGeometry         _:b82 .
+
+_:b82   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.255060612382679 50.84357981386216)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000172>
+        rdf:type                locn:Address ;
+        rdfs:label              "Gaverstraat 55, 8780 Oostrozebeke" ;
+        locn:fullAddress        "Gaverstraat 55, 8780 Oostrozebeke" ;
+        locn:thoroughfare       "Gaverstraat" ;
+        locn:locatorDesignator  "55" ;
+        locn:postName           "Oostrozebeke" ;
+        locn:postCode           "8780" ;
+        locn:addrssID           "2000000172" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/37010#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanPerceel> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/58910> ;
+        geo:hasGeometry         _:b83 .
+
+_:b83   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.341299484593788 50.91658959496509)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000174>
+        rdf:type                locn:Address ;
+        rdfs:label              "Vanarenberglaan 16, 3540 Herk-de-Stad" ;
+        locn:fullAddress        "Vanarenberglaan 16, 3540 Herk-de-Stad" ;
+        locn:thoroughfare       "Vanarenberglaan" ;
+        locn:locatorDesignator  "16" ;
+        locn:postName           "Herk-de-Stad" ;
+        locn:postCode           "3540" ;
+        locn:addrssID           "2000000174" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71024#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/115356> ;
+        geo:hasGeometry         _:b84 .
+
+_:b84   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.179778294489051 50.95530409490899)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000176>
+        rdf:type                locn:Address ;
+        rdfs:label              "Lange Streepweg 13, 9820 Merelbeke" ;
+        locn:fullAddress        "Lange Streepweg 13, 9820 Merelbeke" ;
+        locn:thoroughfare       "Lange Streepweg" ;
+        locn:locatorDesignator  "13" ;
+        locn:postName           "Merelbeke" ;
+        locn:postCode           "9820" ;
+        locn:addrssID           "2000000176" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44043#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/72818> ;
+        geo:hasGeometry         _:b85 .
+
+_:b85   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.750350709845092 51.01918467563954)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000178>
+        rdf:type                locn:Address ;
+        rdfs:label              "Boeretang 214, 2400 Mol" ;
+        locn:fullAddress        "Boeretang 214, 2400 Mol" ;
+        locn:thoroughfare       "Boeretang" ;
+        locn:locatorDesignator  "214" ;
+        locn:postName           "Mol" ;
+        locn:postCode           "2400" ;
+        locn:addrssID           "2000000178" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/13025#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/15992> ;
+        geo:hasGeometry         _:b86 .
+
+_:b86   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.086777686976667 51.220587389216725)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000180>
+        rdf:type                locn:Address ;
+        rdfs:label              "Bijlkestraat 85, 3600 Genk" ;
+        locn:fullAddress        "Bijlkestraat 85, 3600 Genk" ;
+        locn:thoroughfare       "Bijlkestraat" ;
+        locn:locatorDesignator  "85" ;
+        locn:postName           "Genk" ;
+        locn:postCode           "3600" ;
+        locn:addrssID           "2000000180" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71016#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/113507> ;
+        geo:hasGeometry         _:b87 .
+
+_:b87   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.532047656513061 50.928860020543745)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000002>
+        rdf:type                locn:Address ;
+        rdfs:label              "Duivenstraat 102, 2800 Mechelen" ;
+        locn:fullAddress        "Duivenstraat 102, 2800 Mechelen" ;
+        locn:thoroughfare       "Duivenstraat" ;
+        locn:locatorDesignator  "102" ;
+        locn:postName           "Mechelen" ;
+        locn:postCode           "2800" ;
+        locn:addrssID           "2000000002" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/12025#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/10507> ;
+        geo:hasGeometry         _:b88 .
+
+_:b88   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.493435276935977 51.04556450532786)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000004>
+        rdf:type                locn:Address ;
+        rdfs:label              "Nijverheidsstraat 67, 9890 Gavere" ;
+        locn:fullAddress        "Nijverheidsstraat 67, 9890 Gavere" ;
+        locn:thoroughfare       "Nijverheidsstraat" ;
+        locn:locatorDesignator  "67" ;
+        locn:postName           "Gavere" ;
+        locn:postCode           "9890" ;
+        locn:addrssID           "2000000004" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44020#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanPerceelGrb> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/69428> ;
+        geo:hasGeometry         _:b89 .
+
+_:b89   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.6799934366872087 50.92062313251889)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000006>
+        rdf:type                locn:Address ;
+        rdfs:label              "Nieuwesteenweg 17A, 3850 Nieuwerkerken" ;
+        locn:fullAddress        "Nieuwesteenweg 17A, 3850 Nieuwerkerken" ;
+        locn:thoroughfare       "Nieuwesteenweg" ;
+        locn:locatorDesignator  "17A" ;
+        locn:postName           "Nieuwerkerken" ;
+        locn:postCode           "3850" ;
+        locn:addrssID           "2000000006" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71045#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/115865> ;
+        geo:hasGeometry         _:b90 .
+
+_:b90   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.1893398060864415 50.86437205832887)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000008>
+        rdf:type                locn:Address ;
+        rdfs:label              "Leliestraat 9, 3582 Beringen" ;
+        locn:fullAddress        "Leliestraat 9, 3582 Beringen" ;
+        locn:thoroughfare       "Leliestraat" ;
+        locn:locatorDesignator  "9" ;
+        locn:postName           "Beringen" ;
+        locn:postCode           "3582" ;
+        locn:addrssID           "2000000008" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71004#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanPerceel> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/112970> ;
+        geo:hasGeometry         _:b91 .
+
+_:b91   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.274606375074826 51.06270221095083)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000010>
+        rdf:type                locn:Address ;
+        rdfs:label              "Keltenveld 12, 2550 Kontich" ;
+        locn:fullAddress        "Keltenveld 12, 2550 Kontich" ;
+        locn:thoroughfare       "Keltenveld" ;
+        locn:locatorDesignator  "12" ;
+        locn:postName           "Kontich" ;
+        locn:postCode           "2550" ;
+        locn:addrssID           "2000000010" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11024#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/5703> ;
+        geo:hasGeometry         _:b92 .
+
+_:b92   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.465816482959241 51.125999480751965)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000012>
+        rdf:type                locn:Address ;
+        rdfs:label              "Leupegemstraat 25, 9700 Oudenaarde" ;
+        locn:fullAddress        "Leupegemstraat 25, 9700 Oudenaarde" ;
+        locn:thoroughfare       "Leupegemstraat" ;
+        locn:locatorDesignator  "25" ;
+        locn:postName           "Oudenaarde" ;
+        locn:postCode           "9700" ;
+        locn:addrssID           "2000000012" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/45035#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/manueleAanduidingVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/74551> ;
+        geo:hasGeometry         _:b93 .
+
+_:b93   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.6047578282744297 50.83387787277949)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000014>
+        rdf:type                locn:Address ;
+        rdfs:label              "De Neufstraat 7, 2100 Antwerpen" ;
+        locn:fullAddress        "De Neufstraat 7, 2100 Antwerpen" ;
+        locn:thoroughfare       "De Neufstraat" ;
+        locn:locatorDesignator  "7" ;
+        locn:postName           "Antwerpen" ;
+        locn:postCode           "2100" ;
+        locn:addrssID           "2000000014" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/11002#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/627> ;
+        geo:hasGeometry         _:b94 .
+
+_:b94   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.465415393067559 51.222026043998234)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000016>
+        rdf:type                locn:Address ;
+        rdfs:label              "Nieuwe Bevelsesteenweg 8, 2560 Nijlen" ;
+        locn:fullAddress        "Nieuwe Bevelsesteenweg 8, 2560 Nijlen" ;
+        locn:thoroughfare       "Nieuwe Bevelsesteenweg" ;
+        locn:locatorDesignator  "8" ;
+        locn:postName           "Nijlen" ;
+        locn:postCode           "2560" ;
+        locn:addrssID           "2000000016" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/12026#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/11331> ;
+        geo:hasGeometry         _:b95 .
+
+_:b95   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (4.634376592540085 51.136957397003684)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000019>
+        rdf:type                locn:Address ;
+        rdfs:label              "Albatrosstraat 11, 8400 Oostende" ;
+        locn:fullAddress        "Albatrosstraat 11, 8400 Oostende" ;
+        locn:thoroughfare       "Albatrosstraat" ;
+        locn:locatorDesignator  "11" ;
+        locn:postName           "Oostende" ;
+        locn:postCode           "8400" ;
+        locn:addrssID           "2000000019" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/35013#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/55622> ;
+        geo:hasGeometry         _:b96 .
+
+_:b96   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (2.9302729362331563 51.20639753445997)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000021>
+        rdf:type                locn:Address ;
+        rdfs:label              "Lovelddreef 29, 9880 Aalter" ;
+        locn:fullAddress        "Lovelddreef 29, 9880 Aalter" ;
+        locn:thoroughfare       "Lovelddreef" ;
+        locn:locatorDesignator  "29" ;
+        locn:postName           "Aalter" ;
+        locn:postCode           "9880" ;
+        locn:addrssID           "2000000021" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44001#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanPerceelGrb> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/67991> ;
+        geo:hasGeometry         _:b97 .
+
+_:b97   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.463794977824006 51.07674654186331)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000023>
+        rdf:type                locn:Address ;
+        rdfs:label              "Carnegielaan 10, 3500 Hasselt" ;
+        locn:fullAddress        "Carnegielaan 10, 3500 Hasselt" ;
+        locn:thoroughfare       "Carnegielaan" ;
+        locn:locatorDesignator  "10" ;
+        locn:postName           "Hasselt" ;
+        locn:postCode           "3500" ;
+        locn:addrssID           "2000000023" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/71022#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/114601> ;
+        geo:hasGeometry         _:b98 .
+
+_:b98   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (5.346980772645337 50.95793317390113)"^^geo:wktLiteral .
+
+<http://id.vlaanderen.be/id/adres/2000000025>
+        rdf:type                locn:Address ;
+        rdfs:label              "Sint-Pietersheide 29, 9830 Sint-Martens-Latem" ;
+        locn:fullAddress        "Sint-Pietersheide 29, 9830 Sint-Martens-Latem" ;
+        locn:thoroughfare       "Sint-Pietersheide" ;
+        locn:locatorDesignator  "29" ;
+        locn:postName           "Sint-Martens-Latem" ;
+        locn:postCode           "9830" ;
+        locn:addrssID           "2000000025" ;
+        xkos:classifiedUnder    <http://id.fedstats.be/nis/44064#id> ;
+        prov:wasGeneratedBy     <http://id.vlaanderen.be/id/activiteit/afgeleidVanGebouw> ;
+        geo:sfTouches           <http://id.vlaanderen.be/id/straat/73640> ;
+        geo:hasGeometry         _:b99 .
+
+_:b99   rdf:type   geo:Geometry ;
+        geo:asWKT  "POINT (3.624500497076865 51.007141446904946)"^^geo:wktLiteral .
