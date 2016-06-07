@@ -14,8 +14,26 @@ password	U23}26_b!=kwD[fj
 driverClass	com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 [MappingDeclaration] @collection [[
-mappingId	mapping--205605576
-target		<http://id.vlaanderen.be/id/adres/{AdresID}#id> a <http://www.w3.org/ns/locn#Address> ; <http://purl.org/dc/terms/identifier> {AdresID} . 
-source		SELECT * FROM Adres
+mappingId	mapping-409400504
+target		<http://id.vlaanderen.be/id/adres/{AdresID}> a <http://www.w3.org/ns/locn#Address> ; <http://purl.org/dc/terms/identifier> {AdresID} ; <http://www.w3.org/ns/locn#thoroughfare> {straatnaam_nl}@nl ; <http://www.w3.org/ns/locn#locatorDesignator> {Huisnummer} ; <http://www.w3.org/ns/locn#postName> {gemeentenaam_nl}@nl ; <http://www.opengis.net/ont/geosparql#sfTouches> <http://id.vlaanderen.be/id/straat/{StraatID}> ; <http://www.w3.org/ns/locn#postCode> {Postcode} . 
+source		
+			  SELECT a.AdresID, a.StraatID as straatid, a.Huisnummer, a.Busnummer, a.Postcode,
+			sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl
+			 FROM Adres a
+			 INNER JOIN Straat s on a.StraatID=s.StraatID
+			 INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
+			 INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
+			 INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
+			WHERE sn.TaalISOCode = 'NLD'
+			AND gn.TaalISOCode = 'NLD'
+			  
+
+mappingId	mapping-1862512687
+target		<http://id.vlaanderen.be/id/straat/{StraatID}> a <http://dbpedia.org/ontology/Street> ; <http://purl.org/dc/terms/identifier> {StraatID} . 
+source		SELECT * FROM Straat
+
+mappingId	mapping-887131497
+target		<http://id.vlaanderen.be/id/gemeente/{GemeenteID}> a <http://dbpedia.org/ontology/City> ; <http://purl.org/dc/terms/identifier> {GemeenteID} . 
+source		SELECT * FROM Gemeente
 ]]
 
