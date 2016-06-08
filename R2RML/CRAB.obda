@@ -14,8 +14,8 @@ password	U23}26_b!=kwD[fj
 driverClass	com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 [MappingDeclaration] @collection [[
-mappingId	mapping--1029942068
-target		<http://id.vlaanderen.be/id/adres/{AdresID}> a <http://www.w3.org/ns/locn#Address> ; <http://www.opengis.net/ont/geosparql#sfTouches> <http://id.vlaanderen.be/id/straat/{StraatID}> ; <http://www.w3.org/ns/locn#thoroughfare> {straatnaam_nl}@nl ; <http://www.w3.org/ns/locn#postCode> {Postcode} ; <http://www.w3.org/ns/locn#locatorDesignator> {Huisnummer} ; <http://www.w3.org/ns/locn#postName> {gemeentenaam_nl}@nl ; rdfs:label "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}"^^rdfs:Literal ; <http://purl.org/dc/terms/identifier> {AdresID} . 
+mappingId	mapping--2015545373
+target		<http://id.vlaanderen.be/id/adres/{AdresID}> a <http://www.w3.org/ns/locn#Address> ; <http://www.w3.org/ns/locn#locatorDesignator> {Huisnummer} ; <http://purl.org/dc/terms/identifier> {AdresID} ; <http://www.w3.org/ns/locn#thoroughfare> {straatnaam_nl}@nl ; rdfs:label "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}"^^rdfs:Literal ; <http://www.opengis.net/ont/geosparql#sfTouches> <http://id.vlaanderen.be/id/straat/{StraatID}> ; <http://www.w3.org/ns/locn#postCode> {Postcode} ; <http://www.w3.org/ns/locn#postName> {gemeentenaam_nl}@nl . 
 source		
 			  SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode,
 			sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl
@@ -28,25 +28,71 @@ source
 			AND gn.TaalISOCode = 'NLD'
 			  
 
-mappingId	mapping-86267537
-target		<http://id.vlaanderen.be/id/straat/{StraatID}> a <http://dbpedia.org/ontology/Street> ; <http://purl.org/dc/terms/identifier> {StraatID} ; rdfs:label "{straatnaam_nl}, {gemeentenaam_nl}"^^rdfs:Literal ; <http://www.opengis.net/ont/geosparql#sfWithin> <http://id.vlaanderen.be/id/gemeente/{GemeenteID}> ; <http://www.w3.org/ns/locn#postName> {gemeentenaam_nl}@nl . 
+mappingId	mapping-342202389
+target		<http://id.vlaanderen.be/id/straat/{StraatID}> a <http://dbpedia.org/ontology/Street> ; <http://www.opengis.net/ont/geosparql#sfWithin> <http://id.vlaanderen.be/id/gemeente/{GemeenteID}> ; rdfs:label "{Straatnaam_DEU}, {Gemeentenaam_DEU}"@de , "{Straatnaam_NDL}, {Gemeentenaam_NDL}"@nl ; <http://purl.org/dc/terms/identifier> {StraatID} ; <http://www.w3.org/ns/locn#postName> {Gemeentenaam_DEU}@de , {Gemeentenaam_NDL}@nl , {Gemeentenaam_FRA}@fr . 
 source		
-			  SELECT s.StraatID, sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl
-			 FROM Straat s
-			 INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
-			 INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
-			 INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
-			WHERE sn.TaalISOCode = 'NLD'
-			AND gn.TaalISOCode = 'NLD'
+			  SELECT
+			  StraatID,
+			  GemeenteID,
+			  (
+			    SELECT Naam
+			    FROM Straatnaam
+			    WHERE Straatnaam.StraatID = Straat.StraatID and Straatnaam.TaalISOCode='NLD'
+			  ) AS Straatnaam_NDL,
+			  (
+			    SELECT Naam
+			    FROM Straatnaam
+			    WHERE Straatnaam.StraatID = Straat.StraatID and Straatnaam.TaalISOCode='FRA'
+			  ) AS Straatnaam_FRA,
+			  (
+			    SELECT Naam
+			    FROM Straatnaam
+			    WHERE Straatnaam.StraatID = Straat.StraatID and Straatnaam.TaalISOCode='DEU'
+			  ) AS Straatnaam_DEU,
+			  (
+			    SELECT Naam
+			    FROM Gemeentenaam, Gemeente
+			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeente.GemeenteID = Straat.GemeenteID and Gemeentenaam.TaalISOCode='NLD'
+			  ) AS Gemeentenaam_NDL,
+			  (
+			    SELECT Naam
+			    FROM Gemeentenaam, Gemeente
+			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeente.GemeenteID = Straat.GemeenteID and Gemeentenaam.TaalISOCode='FRA'
+			  ) AS Gemeentenaam_FRA,
+			  (
+			    SELECT Naam
+			    FROM Gemeentenaam, Gemeente
+			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeente.GemeenteID = Straat.GemeenteID and Gemeentenaam.TaalISOCode='DEU'
+			  ) AS Gemeentenaam_DEU
+			FROM STRAAT
 			  
 
-mappingId	mapping--1638567852
-target		<http://id.vlaanderen.be/id/gemeente/{GemeenteID}> a <http://dbpedia.org/ontology/City> ; <http://purl.org/dc/terms/identifier> {GemeenteID} ; rdfs:label {gemeentenaam_nl}@nl ; <http://rdf-vocabulary.ddialliance.org/xkos#classifiedUnder> <http://id.fedstats.be/nis/{NIS}#id> . 
+mappingId	mapping-1420479608
+target		<http://id.vlaanderen.be/id/gemeente/{GemeenteID}> a <http://dbpedia.org/ontology/City> ; rdfs:label {Gemeentenaam_FRA}@fr , {Gemeentenaam_DEU}@de , {Gemeentenaam_NDL}@nl ; <http://rdf-vocabulary.ddialliance.org/xkos#classifiedUnder> <http://id.fedstats.be/nis/{NIScode}#id> ; <http://purl.org/dc/terms/identifier> {GemeenteID} . 
 source		
-			  SELECT g.GemeenteID as GemeenteID, g.NIScode as NIS, gn.Naam as gemeentenaam_nl
-			 FROM Gemeente g
-			 INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
-			WHERE gn.TaalISOCode = 'NLD'
+			 SELECT
+			  GemeenteID,
+			  NIScode,
+			  (
+			    SELECT Naam
+			    FROM Gemeentenaam
+			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeentenaam.TaalISOCode='NLD'
+			  ) AS Gemeentenaam_NDL,
+			  (
+			    SELECT Naam
+			    FROM Gemeentenaam
+			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeentenaam.TaalISOCode='FRA'
+			  ) AS Gemeentenaam_FRA,
+			  (
+			    SELECT Naam
+			    FROM Gemeentenaam
+			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeentenaam.TaalISOCode='DEU'
+			  ) AS Gemeentenaam_DEU
+			
+			FROM
+			  Gemeente
+			
+			
 			  
 ]]
 
