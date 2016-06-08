@@ -24,7 +24,7 @@
   a rr:TriplesMap;
   rr:logicalTable [ 
   rr:sqlQuery """
-  SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode,
+  SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode, a.Positie,
 sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl
  FROM Adres a
  INNER JOIN Straat s on a.StraatID=s.StraatID
@@ -100,6 +100,14 @@ rr:predicateObjectMap [
     rr:objectMap [
     rr:column "straatnaam_nl";
     rr:language "nl"
+    ]
+   ]
+ ;  
+ rr:predicateObjectMap [
+    rr:predicate geo:asWKT;
+    rr:objectMap [
+    rr:column "Positie";
+    rr:datatype geo:wktLiteral
     ]
    ]
  ;  
