@@ -18,6 +18,7 @@
 @prefix geo:  <http://www.opengis.net/ont/geosparql#> .
 @prefix db: <http://dbpedia.org/ontology/> .
 @prefix xkos:  <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix wkt:  <http://rdf-vocabulary.ddialliance.org/xkos#> .
 
 
 <AdresMapping>
@@ -25,11 +26,11 @@
   rr:logicalTable [ 
   rr:sqlQuery """SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode, a.Positie,
 sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl
- FROM Adres a
- INNER JOIN Straat s on a.StraatID=s.StraatID
- INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
- INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
- INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
+FROM Adres a
+INNER JOIN Straat s on a.StraatID=s.StraatID
+INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
+INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
+INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
 WHERE sn.TaalISOCode = 'NLD'
 AND gn.TaalISOCode = 'NLD'""" 
   ];
@@ -102,16 +103,37 @@ rr:predicateObjectMap [
     ]
    ]
  ;  
+
  rr:predicateObjectMap [
+    rr:predicate geo:hasGeometry;
+    rr:objectMap [
+    rr:template "http://id.vlaanderen.be/id/geometry/adres/{AdresID}";
+
+    ]
+   ]
+ ; 
+ 
+ .
+
+ <GeoMapping>
+  a rr:TriplesMap;
+  rr:logicalTable [ 
+ rr:tableName "Adres"
+  ];
+  rr:subjectMap [
+    rr:template "http://id.vlaanderen.be/id/geometry/adres/{AdresID}";
+    rr:class geo:Geometry
+  ]
+;
+rr:predicateObjectMap [
     rr:predicate geo:asWKT;
     rr:objectMap [
     rr:column "Positie";
     rr:datatype geo:wktLiteral
     ]
    ]
- ;  
-  
- .
+ ;  .
+
 
   <StraatMapping>
   a rr:TriplesMap;
@@ -254,7 +276,7 @@ rr:predicateObjectMap [
     WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeentenaam.TaalISOCode='DEU'
   ) AS Gemeentenaam_DEU
 FROM
-  Gemeente """ 
+  Gemeente""" 
   ];
   rr:subjectMap [
     rr:template "http://id.vlaanderen.be/id/gemeente/{GemeenteID}";
