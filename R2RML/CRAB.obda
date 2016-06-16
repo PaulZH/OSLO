@@ -1,10 +1,28 @@
 [PrefixDeclaration]
-:		http://www.semanticweb.org/paul/ontologies/2016/5/untitled-ontology-9#
+:		http://www.vlaanderen.be/ns/geo#
+db:		http://dbpedia.org/ontology/
+ql:		http://semweb.mmlab.be/ns/ql#
+rr:		http://www.w3.org/ns/r2rml#
+geo:		http://www.opengis.net/ont/geosparql#
+kbo:		http://data.kbodata.be/def#
+org:		http://www.w3.org/ns/org#
 owl:		http://www.w3.org/2002/07/owl#
 rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rml:		http://semweb.mmlab.be/ns/rml#
+rov:		http://www.w3.org/ns/regorg#
+wkt:		http://rdf-vocabulary.ddialliance.org/xkos#
 xml:		http://www.w3.org/XML/1998/namespace
 xsd:		http://www.w3.org/2001/XMLSchema#
+foaf:		http://xmlns.com/foaf/0.1/
+locn:		http://www.w3.org/ns/locn#
+oslo:		http://purl.org/oslo/ns/localgov#
 rdfs:		http://www.w3.org/2000/01/rdf-schema#
+skos:		http://www.w3.org/2004/02/skos/core#
+xkos:		http://rdf-vocabulary.ddialliance.org/xkos#
+geovl:		http://id.vlaanderen.be/ns/geo#
+vcard:		http://www.w3.org/2006/vcard/ns#
+schema:		http://schema.org/
+dcterms:		http://purl.org/dc/terms/
 
 [SourceDeclaration]
 sourceUri	datasource1
@@ -14,85 +32,25 @@ password	U23}26_b!=kwD[fj
 driverClass	com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 [MappingDeclaration] @collection [[
-mappingId	mapping--2015545373
-target		<http://id.vlaanderen.be/id/adres/{AdresID}> a <http://www.w3.org/ns/locn#Address> ; <http://www.w3.org/ns/locn#locatorDesignator> {Huisnummer} ; <http://purl.org/dc/terms/identifier> {AdresID} ; <http://www.w3.org/ns/locn#thoroughfare> {straatnaam_nl}@nl ; rdfs:label "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}"^^rdfs:Literal ; <http://www.opengis.net/ont/geosparql#sfTouches> <http://id.vlaanderen.be/id/straat/{StraatID}> ; <http://www.w3.org/ns/locn#postCode> {Postcode} ; <http://www.w3.org/ns/locn#postName> {gemeentenaam_nl}@nl . 
-source		
-			  SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode,
+mappingId	mapping-734043130
+target		<http://id.vlaanderen.be/id/adres/{AdresID}> a locn:Address ; geo:hasGeometry <http://id.vlaanderen.be/id/geometry/adres/{AdresID}> ; dcterms:identifier {AdresID}^^xsd:integer ; locn:postCode {Postcode} ; locn:locatorDesignator {Huisnummer} ; locn:postName {gemeentenaam_nl}@nl ; geo:sfTouches <http://id.vlaanderen.be/id/straat/{StraatID}> ; locn:thoroughfare {straatnaam_nl}@nl ; rdfs:label "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}"^^rdfs:Literal . 
+source		SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode, a.Positie,
 			sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl
-			 FROM Adres a
-			 INNER JOIN Straat s on a.StraatID=s.StraatID
-			 INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
-			 INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
-			 INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
+			FROM Adres a
+			INNER JOIN Straat s on a.StraatID=s.StraatID
+			INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
+			INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
+			INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
 			WHERE sn.TaalISOCode = 'NLD'
 			AND gn.TaalISOCode = 'NLD'
-			  
 
-mappingId	mapping-342202389
-target		<http://id.vlaanderen.be/id/straat/{StraatID}> a <http://dbpedia.org/ontology/Street> ; <http://www.opengis.net/ont/geosparql#sfWithin> <http://id.vlaanderen.be/id/gemeente/{GemeenteID}> ; rdfs:label "{Straatnaam_DEU}, {Gemeentenaam_DEU}"@de , "{Straatnaam_NDL}, {Gemeentenaam_NDL}"@nl ; <http://purl.org/dc/terms/identifier> {StraatID} ; <http://www.w3.org/ns/locn#postName> {Gemeentenaam_DEU}@de , {Gemeentenaam_NDL}@nl , {Gemeentenaam_FRA}@fr . 
-source		
-			  SELECT
-			  StraatID,
-			  GemeenteID,
-			  (
-			    SELECT Naam
-			    FROM Straatnaam
-			    WHERE Straatnaam.StraatID = Straat.StraatID and Straatnaam.TaalISOCode='NLD'
-			  ) AS Straatnaam_NDL,
-			  (
-			    SELECT Naam
-			    FROM Straatnaam
-			    WHERE Straatnaam.StraatID = Straat.StraatID and Straatnaam.TaalISOCode='FRA'
-			  ) AS Straatnaam_FRA,
-			  (
-			    SELECT Naam
-			    FROM Straatnaam
-			    WHERE Straatnaam.StraatID = Straat.StraatID and Straatnaam.TaalISOCode='DEU'
-			  ) AS Straatnaam_DEU,
-			  (
-			    SELECT Naam
-			    FROM Gemeentenaam, Gemeente
-			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeente.GemeenteID = Straat.GemeenteID and Gemeentenaam.TaalISOCode='NLD'
-			  ) AS Gemeentenaam_NDL,
-			  (
-			    SELECT Naam
-			    FROM Gemeentenaam, Gemeente
-			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeente.GemeenteID = Straat.GemeenteID and Gemeentenaam.TaalISOCode='FRA'
-			  ) AS Gemeentenaam_FRA,
-			  (
-			    SELECT Naam
-			    FROM Gemeentenaam, Gemeente
-			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeente.GemeenteID = Straat.GemeenteID and Gemeentenaam.TaalISOCode='DEU'
-			  ) AS Gemeentenaam_DEU
-			FROM STRAAT
-			  
-
-mappingId	mapping-1420479608
-target		<http://id.vlaanderen.be/id/gemeente/{GemeenteID}> a <http://dbpedia.org/ontology/City> ; rdfs:label {Gemeentenaam_FRA}@fr , {Gemeentenaam_DEU}@de , {Gemeentenaam_NDL}@nl ; <http://rdf-vocabulary.ddialliance.org/xkos#classifiedUnder> <http://id.fedstats.be/nis/{NIScode}#id> ; <http://purl.org/dc/terms/identifier> {GemeenteID} . 
-source		
-			 SELECT
-			  GemeenteID,
-			  NIScode,
-			  (
-			    SELECT Naam
-			    FROM Gemeentenaam
-			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeentenaam.TaalISOCode='NLD'
-			  ) AS Gemeentenaam_NDL,
-			  (
-			    SELECT Naam
-			    FROM Gemeentenaam
-			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeentenaam.TaalISOCode='FRA'
-			  ) AS Gemeentenaam_FRA,
-			  (
-			    SELECT Naam
-			    FROM Gemeentenaam
-			    WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeentenaam.TaalISOCode='DEU'
-			  ) AS Gemeentenaam_DEU
-			
-			FROM
-			  Gemeente
-			
-			
-			  
+mappingId	mapping--656471061
+target		<http://id.vlaanderen.be/id/geometry/adres/{AdresID}> a geo:Geometry ; geovl:adresStatus {Status} ; geo:asWKT {Positie} ; geovl:adresPositieSpecificatie {Specificatie} ; geovl:adresPositieMethode {Methode} . 
+source		SELECT a.AdresID, aps.Omschrijving as Specificatie, apm.Omschrijving as Methode, ads.Omschrijving as Status
+			FROM Adres a
+			INNER JOIN AdresPositieSpecificatie aps on aps.AdresPositieSpecificatieID=a.AdresPositieSpecificatieID
+			INNER JOIN AdresPositieMethode apm on apm.AdresPositieMethodeID=a.AdresPositieMethodeID
+			INNER JOIN AdresStatus ads on ads.AdresstatusID=a.AdresStatusID      
+			   
 ]]
 
