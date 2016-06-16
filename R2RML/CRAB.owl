@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.proxml.be/ontology/crab#"
-     xml:base="http://www.proxml.be/ontology/crab#"
+<rdf:RDF xmlns="http://www.vlaanderen.be/ns/geo#"
+     xml:base="http://www.vlaanderen.be/ns/geo"
      xmlns:schema="http://schema.org/"
      xmlns:rr="http://www.w3.org/ns/r2rml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -55,6 +55,12 @@
     
 
 
+    <!-- http://rdf-vocabulary.ddialliance.org/xkos#classifiedUnder -->
+
+    <owl:ObjectProperty rdf:about="http://rdf-vocabulary.ddialliance.org/xkos#classifiedUnder"/>
+    
+
+
     <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry"/>
@@ -64,6 +70,12 @@
     <!-- http://www.opengis.net/ont/geosparql#sfTouches -->
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfTouches"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfWithin -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin"/>
     
 
 
@@ -140,6 +152,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://dbpedia.org/ontology/City -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/City"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Street -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Street"/>
     
 
 

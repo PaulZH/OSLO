@@ -18,18 +18,20 @@
 @prefix geo:  <http://www.opengis.net/ont/geosparql#> .
 @prefix db: <http://dbpedia.org/ontology/> .
 @prefix xkos:  <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix geovl: <http://id.vlaanderen.be/ns/geo#> .
 
 
 <AdresMapping>
   a rr:TriplesMap;
   rr:logicalTable [ 
   rr:sqlQuery """SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode, a.Positie,
-sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl
- FROM Adres a
- INNER JOIN Straat s on a.StraatID=s.StraatID
- INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
- INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
- INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
+sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl, ads.Omschrijving as Status
+FROM Adres a
+INNER JOIN Straat s on a.StraatID=s.StraatID
+INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
+INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
+INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
+INNER JOIN AdresStatus ads on ads.AdresstatusID=a.AdresStatusID
 WHERE sn.TaalISOCode = 'NLD'
 AND gn.TaalISOCode = 'NLD'""" 
   ];
@@ -38,17 +40,6 @@ AND gn.TaalISOCode = 'NLD'"""
     rr:class locn:Address
   ]
 ;
-#  rr:predicateObjectMap [
-#    rr:predicate geo:sfTouches;
-#    rr:objectMap [
-#    rr:parentTriplesMap <StraatMapping> ;
-#    rr:joinCondition [
-#       rr:child "StraatID";
-#       rr:parent "StraatID"
-#    ]
-#   ]
-#  ]
-#  ;
 rr:predicateObjectMap [
     rr:predicate geo:sfTouches;
     rr:objectMap [
@@ -102,18 +93,63 @@ rr:predicateObjectMap [
     ]
    ]
  ;  
+
  rr:predicateObjectMap [
+    rr:predicate geo:hasGeometry;
+    rr:objectMap [
+    rr:template "http://id.vlaanderen.be/id/geometry/adres/{AdresID}";
+
+    ]
+   ]
+ ; 
+ rr:predicateObjectMap [
+    rr:predicate geovl:adresStatus;
+    rr:objectMap [
+    rr:column "Status";
+    ]
+   ]
+ ; 
+ .
+
+ <GeoMapping>
+  a rr:TriplesMap;
+  rr:logicalTable [ 
+ rr:sqlQuery """SELECT a.AdresID, aps.Omschrijving as Specificatie, apm.Omschrijving as Methode
+FROM Adres a
+INNER JOIN AdresPositieSpecificatie aps on aps.AdresPositieSpecificatieID=a.AdresPositieSpecificatieID
+INNER JOIN AdresPositieMethode apm on apm.AdresPositieMethodeID=a.AdresPositieMethodeID"""
+  ];
+  rr:subjectMap [
+    rr:template "http://id.vlaanderen.be/id/geometry/adres/{AdresID}";
+    rr:class geo:Geometry
+  ]
+;
+rr:predicateObjectMap [
     rr:predicate geo:asWKT;
     rr:objectMap [
     rr:column "Positie";
     rr:datatype geo:wktLiteral
     ]
    ]
- ;  
-  
+ ; 
+ rr:predicateObjectMap [
+    rr:predicate geovl:adresPositieSpecificatie;
+    rr:objectMap [
+    rr:column "Specificatie";
+    ]
+   ]
+ ; 
+ rr:predicateObjectMap [
+    rr:predicate geovl:adresPositieMethode;
+    rr:objectMap [
+    rr:column "Methode";
+    ]
+   ]
+ ; 
+ 
  .
 
-  <StraatMapping>
+ <StraatMapping>
   a rr:TriplesMap;
   rr:logicalTable [ 
   rr:sqlQuery """SELECT
@@ -162,18 +198,7 @@ FROM STRAAT""" ];
     ]
    ]
  ; 
- # rr:predicateObjectMap [
- #   rr:predicate geo:sfWithin;
- #   rr:objectMap [
- #   rr:parentTriplesMap <GemeenteMapping> ;
- #   rr:joinCondition [
- #      rr:child "GemeenteID";
- #     rr:parent "GemeenteID"
- #   ]
- #  ]
- # ]
- # ;
- # ;
+
 rr:predicateObjectMap [
     rr:predicate geo:sfWithin;
     rr:objectMap [
@@ -254,7 +279,7 @@ rr:predicateObjectMap [
     WHERE Gemeentenaam.GemeenteID = Gemeente.GemeenteID and Gemeentenaam.TaalISOCode='DEU'
   ) AS Gemeentenaam_DEU
 FROM
-  Gemeente """ 
+  Gemeente""" 
   ];
   rr:subjectMap [
     rr:template "http://id.vlaanderen.be/id/gemeente/{GemeenteID}";
@@ -302,5 +327,7 @@ FROM
  .
  
 
+
+ 
 
 
