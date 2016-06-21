@@ -27,11 +27,11 @@
   rr:sqlQuery """SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode, a.Positie,
 sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl, ads.Omschrijving as Status
 FROM Adres a
-INNER JOIN Straat s on a.StraatID=s.StraatID
-INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
-INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
-INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
-INNER JOIN AdresStatus ads on ads.AdresstatusID=a.AdresStatusID
+LEFT JOIN Straat s on a.StraatID=s.StraatID
+LEFT JOIN Straatnaam sn on s.StraatID=sn.StraatID
+LEFT JOIN Gemeente g on s.GemeenteID=g.GemeenteID
+LEFT JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
+LEFT JOIN AdresStatus ads on ads.AdresstatusID=a.AdresStatusID
 WHERE sn.TaalISOCode = 'NLD'
 AND gn.TaalISOCode = 'NLD'""" 
   ];
