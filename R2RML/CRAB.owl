@@ -120,6 +120,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
     <!-- http://www.w3.org/ns/locn#locatorDesignator -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#locatorDesignator"/>

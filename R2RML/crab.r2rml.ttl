@@ -208,6 +208,15 @@ rr:predicateObjectMap [
 ;  
 
 rr:predicateObjectMap [
+    rr:predicate skos:prefLabel;
+    rr:objectMap [
+    rr:column "Straatnaam_NDL";
+    rr:language "nl"
+    ]
+   ]
+ ; 
+
+rr:predicateObjectMap [
     rr:predicate locn:postName;
     rr:objectMap [
     rr:column "Gemeentenaam_NDL";
@@ -243,6 +252,16 @@ rr:predicateObjectMap [
     ]
    ]
  ;    
+
+ rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+    rr:template "{Straatnaam_FRA}, {Gemeentenaam_FRA}";
+    rr:termType rr:Literal ;
+    rr:language 'fr'
+    ]
+   ]
+ ;  
 
  rr:predicateObjectMap [
     rr:predicate rdfs:label;

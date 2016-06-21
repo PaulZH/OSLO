@@ -32,9 +32,25 @@ SELECT DISTINCT ?type WHERE {?x a ?type.}
 
 [QueryItem="advanced"]
 SELECT ?gemeente (count(?straat) as ?aantalstraten)
-WHERE {GRAPH <virtual://CRAB>
+WHERE
 {?gemeente a <http://dbpedia.org/ontology/City>. 
-?straat <http://www.opengis.net/ont/geosparql#sfWithin> ?gemeente.}}
+?straat <http://www.opengis.net/ont/geosparql#sfWithin> ?gemeente.}
 GROUP BY ?gemeente
 ORDER BY DESC(?aantalstraten)
+
+[QueryItem="straat_per_gemeente"]
+SELECT ?gemeente ?straatlabel 
+WHERE {?gemeente a <http://dbpedia.org/ontology/City>. ?straat <http://www.opengis.net/ont/geosparql#sfWithin> ?gemeente; rdfs:label ?straatlabel.
+FILTER (STRSTARTS(?straatlabel,'Den'))}
+ORDER BY ?gemeente ?straatlabel
+
+[QueryItem="straat_per_1gemeente"]
+SELECT ?gemeentenaam ?straatlabel
+WHERE 
+ {?gemeente a <http://dbpedia.org/ontology/City>; 
+rdfs:label ?gemeentenaam. 
+FILTER (STRSTARTS(?gemeentenaam,'Geel'))
+ ?straat <http://www.opengis.net/ont/geosparql#sfWithin> ?gemeente; 
+rdfs:label ?straatlabel.}
+ORDER BY ?straatlabel
 ]]
