@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1466519457297" name="http://www.vlaanderen.be/ns/geo" uri="CRAB.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1466580102768" name="http://www.vlaanderen.be/ns/geo" uri="CRAB.owl"/>
     </group>
 </catalog>

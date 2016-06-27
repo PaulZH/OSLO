@@ -32,28 +32,28 @@ password	U23}26_b!=kwD[fj
 driverClass	com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 [MappingDeclaration] @collection [[
-mappingId	mapping--1783944129
-target		<http://id.vlaanderen.be/id/adres/{AdresID}> a locn:Address ; locn:postCode {Postcode} ; locn:locatorDesignator {Huisnummer} ; dcterms:identifier {AdresID}^^xsd:integer ; rdfs:label "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}"^^rdfs:Literal ; geo:hasGeometry <http://id.vlaanderen.be/id/geometry/adres/{AdresID}> ; geo:sfTouches <http://id.vlaanderen.be/id/straat/{StraatID}> ; geovl:adresStatus {Status} ; locn:postName {gemeentenaam_nl}@nl ; locn:thoroughfare {straatnaam_nl}@nl . 
+mappingId	mapping-826253567
+target		<http://id.vlaanderen.be/id/adres/{AdresID}> a locn:Address ; geo:sfTouches <http://id.vlaanderen.be/id/straat/{StraatID}> ; geo:hasGeometry <http://id.vlaanderen.be/id/geometry/adres/{AdresID}> ; locn:thoroughfare {straatnaam_nl}@nl ; locn:postName {gemeentenaam_nl}@nl ; dcterms:identifier {AdresID} ; locn:postCode {Postcode} ; locn:locatorDesignator {Huisnummer} ; geovl:adresStatus {Status} ; rdfs:label "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}"@nl ; skos:prefLabel "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}"@nl . 
 source		SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode, a.Positie,
 			sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl, ads.Omschrijving as Status
 			FROM Adres a
-			LEFT JOIN Straat s on a.StraatID=s.StraatID
-			LEFT JOIN Straatnaam sn on s.StraatID=sn.StraatID
-			LEFT JOIN Gemeente g on s.GemeenteID=g.GemeenteID
-			LEFT JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
-			LEFT JOIN AdresStatus ads on ads.AdresstatusID=a.AdresStatusID
+			INNER JOIN Straat s on a.StraatID=s.StraatID
+			INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
+			INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
+			INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
+			INNER JOIN AdresStatus ads on ads.AdresstatusID=a.AdresStatusID
 			WHERE sn.TaalISOCode = 'NLD'
 			AND gn.TaalISOCode = 'NLD'
 
-mappingId	mapping--1244692185
-target		<http://id.vlaanderen.be/id/geometry/adres/{AdresID}> a geo:Geometry ; geo:asWKT {Positie} ; geovl:adresPositieSpecificatie {Specificatie} ; geovl:adresPositieMethode {Methode} . 
+mappingId	mapping--449182287
+target		<http://id.vlaanderen.be/id/geometry/adres/{AdresID}> a geo:Geometry ; geovl:adresPositieSpecificatie {Specificatie} ; geo:asWKT {Positie} ; rdfs:label "Locatie van crabID {AdresID}"@nl ; geovl:adresPositieMethode {Methode} . 
 source		SELECT a.AdresID, aps.Omschrijving as Specificatie, apm.Omschrijving as Methode
 			FROM Adres a
 			INNER JOIN AdresPositieSpecificatie aps on aps.AdresPositieSpecificatieID=a.AdresPositieSpecificatieID
 			INNER JOIN AdresPositieMethode apm on apm.AdresPositieMethodeID=a.AdresPositieMethodeID
 
-mappingId	mapping--688632210
-target		<http://id.vlaanderen.be/id/straat/{StraatID}> a db:Street ; rdfs:label "{Straatnaam_NDL}, {Gemeentenaam_NDL}"@nl , "{Straatnaam_FRA}, {Gemeentenaam_FRA}"@fr , "{Straatnaam_DEU}, {Gemeentenaam_DEU}"@de ; dcterms:identifier {StraatID} ; geo:sfWithin <http://id.vlaanderen.be/id/gemeente/{GemeenteID}> ; locn:postName {Gemeentenaam_DEU}@de , {Gemeentenaam_FRA}@fr , {Gemeentenaam_NDL}@nl ; skos:prefLabel {Straatnaam_NDL}@nl . 
+mappingId	mapping--1368864046
+target		<http://id.vlaanderen.be/id/straat/{StraatID}> a db:Street ; skos:prefLabel {Straatnaam_NDL}@nl ; rdfs:label "{Straatnaam_FRA}, {Gemeentenaam_FRA}"@fr , "{Straatnaam_NDL}, {Gemeentenaam_NDL}"@nl , "{Straatnaam_DEU}, {Gemeentenaam_DEU}"@de ; geo:sfWithin <http://id.vlaanderen.be/id/gemeente/{GemeenteID}> ; dcterms:identifier {StraatID} ; locn:postName {Gemeentenaam_DEU}@de , {Gemeentenaam_FRA}@fr , {Gemeentenaam_NDL}@nl . 
 source		SELECT
 			  StraatID,
 			  GemeenteID,
@@ -89,8 +89,8 @@ source		SELECT
 			  ) AS Gemeentenaam_DEU
 			FROM STRAAT
 
-mappingId	mapping--55898307
-target		<http://id.vlaanderen.be/id/gemeente/{GemeenteID}> a db:City ; xkos:classifiedUnder <http://id.fedstats.be/nis/{NIScode}#id> ; rdfs:label {Gemeentenaam_NDL}@nl , {Gemeentenaam_FRA}@fr , {Gemeentenaam_DEU}@de ; dcterms:identifier {GemeenteID} . 
+mappingId	mapping--402614983
+target		<http://id.vlaanderen.be/id/gemeente/{GemeenteID}> a db:City ; rdfs:label {Gemeentenaam_NDL}@nl , {Gemeentenaam_DEU}@de , {Gemeentenaam_FRA}@fr ; xkos:classifiedUnder <http://id.fedstats.be/nis/{NIScode}#id> ; dcterms:identifier {GemeenteID} ; skos:prefLabel {Gemeentenaam_NDL}@nl . 
 source		SELECT
 			  GemeenteID,
 			  NIScode,

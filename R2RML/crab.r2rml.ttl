@@ -27,11 +27,11 @@
   rr:sqlQuery """SELECT a.AdresID, a.StraatID, a.Huisnummer, a.Busnummer, a.Postcode, a.Positie,
 sn.Naam as straatnaam_nl, gn.Naam as gemeentenaam_nl, ads.Omschrijving as Status
 FROM Adres a
-LEFT JOIN Straat s on a.StraatID=s.StraatID
-LEFT JOIN Straatnaam sn on s.StraatID=sn.StraatID
-LEFT JOIN Gemeente g on s.GemeenteID=g.GemeenteID
-LEFT JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
-LEFT JOIN AdresStatus ads on ads.AdresstatusID=a.AdresStatusID
+INNER JOIN Straat s on a.StraatID=s.StraatID
+INNER JOIN Straatnaam sn on s.StraatID=sn.StraatID
+INNER JOIN Gemeente g on s.GemeenteID=g.GemeenteID
+INNER JOIN Gemeentenaam gn on g.GemeenteID=gn.GemeenteID
+INNER JOIN AdresStatus ads on ads.AdresstatusID=a.AdresStatusID
 WHERE sn.TaalISOCode = 'NLD'
 AND gn.TaalISOCode = 'NLD'""" 
   ];
@@ -51,7 +51,17 @@ rr:predicateObjectMap [
     rr:predicate rdfs:label;
     rr:objectMap [
     rr:template "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}";
-    rr:termType rr:Literal
+    rr:termType rr:Literal ;
+    rr:language "nl"
+    ]
+   ]
+ ; 
+ rr:predicateObjectMap [
+    rr:predicate skos:prefLabel;
+    rr:objectMap [
+    rr:template "{straatnaam_nl} {Huisnummer}, {Postcode} {gemeentenaam_nl}";
+    rr:termType rr:Literal;
+    rr:language "nl"
     ]
    ]
  ; 
@@ -59,7 +69,6 @@ rr:predicateObjectMap [
     rr:predicate dcterms:identifier;
     rr:objectMap [
     rr:column "AdresID";
-    rr:datatype xsd:integer
     ]
    ]
  ; 
@@ -124,6 +133,15 @@ INNER JOIN AdresPositieMethode apm on apm.AdresPositieMethodeID=a.AdresPositieMe
     rr:class geo:Geometry
   ]
 ;
+rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [
+    rr:template "Locatie van crabID {AdresID}";
+    rr:termType rr:Literal ;
+    rr:language "nl"
+    ]
+   ]
+ ; 
 rr:predicateObjectMap [
     rr:predicate geo:asWKT;
     rr:objectMap [
@@ -342,7 +360,15 @@ FROM
     rr:language "de"
     ]
    ]
- ;       
+ ;      
+ rr:predicateObjectMap [
+    rr:predicate skos:prefLabel;
+    rr:objectMap [
+    rr:column "Gemeentenaam_NDL";
+    rr:language "nl"
+    ]
+   ]
+ ;  
  .
  
 
